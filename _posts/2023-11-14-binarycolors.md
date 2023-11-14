@@ -1,3 +1,13 @@
+---
+toc: true
+comments: false
+layout: post
+title: Colors AND
+description: AND Colors together
+type: hacks
+courses: { compsci: {week: 1} }
+---
+
 <html lang="en">
 <head>
   <link rel="stylesheet" href="css.css">
