@@ -53,7 +53,7 @@ courses: { compsci: {week: 1} }
     </td> 
     <td>
       <!-- Creating buttons for the second cell -->
-      <p style="color:green">G</p>
+      <p style="color:red">R</p>
       <script>
         for (var i = 9; i <= 16; i++) {
           var buttonNumber = i;
@@ -66,7 +66,7 @@ courses: { compsci: {week: 1} }
   <tr>
     <td>
       <!-- Creating buttons for the third cell -->
-      <p style="color:blue">B</p>
+      <p style="color:green">G</p>
       <script>
         for (var i = 17; i <= 24; i++) {
           var buttonNumber = i;
@@ -76,7 +76,7 @@ courses: { compsci: {week: 1} }
     </td>
     <td>
       <!-- Creating buttons for the fourth cell -->
-      <p style="color:red">R</p>
+      <p style="color:green">B</p>
       <script>
         for (var i = 25; i <= 32; i++) {
           var buttonNumber = i;
@@ -89,7 +89,7 @@ courses: { compsci: {week: 1} }
   <tr>
     <td>
       <!-- Creating buttons for the fifth cell -->
-      <p style="color:green">G</p>
+      <p style="color:blue">B</p>
       <script>
         for (var i = 33; i <= 40; i++) {
           var buttonNumber = i;
