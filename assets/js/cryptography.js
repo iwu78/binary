@@ -1,4 +1,4 @@
-var myrng = new Math.seedrandom('seed');
+var myrng = new Math.seedrandom(document.getElementById('seed').value);
 const imageInput = document.getElementById('imageInput');
 const resultDiv = document.getElementById('resultDiv');
 const ctx = document.createElement('canvas').getContext('2d');
