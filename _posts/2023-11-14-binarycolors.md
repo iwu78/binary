@@ -15,12 +15,6 @@ courses: { compsci: {week: 1} }
 <body>
 
 <style>
-  .button-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
   .button {
     width: 10%;
     padding: 10px;
@@ -28,28 +22,91 @@ courses: { compsci: {week: 1} }
   }
 </style>
 
-<div class="button-container">
-  <!-- Creating buttons using a loop -->
-  <script>
-    function buttonClicked(buttonNumber) {
-      var button = document.getElementById("button" + buttonNumber);
-      if (button.innerHTML === "0") {
-        button.innerHTML = "1";
-      } else {
-        button.innerHTML = "0";
-      }
-    }
+<table>
+  <tr>
+    <td>
+    <p>First color</p>
+    </td>
+    <td>
+    <p>Second color</p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <!-- Creating buttons for the first cell -->
+      <script>
+        function buttonClicked(buttonNumber) {
+          var button = document.getElementById("button" + buttonNumber);
+          if (button.innerHTML === "0") {
+            button.innerHTML = "1";
+          } else {
+            button.innerHTML = "0";
+          }
+        }
 
-    for (var row = 1; row <= 3; row++) {
-      for (var col = 1; col <= 2; col++) {
         for (var i = 1; i <= 8; i++) {
-          var buttonNumber = (row - 1) * 8 + (col) * 8 + i;
+          var buttonNumber = i;
           document.write('<button id="button' + buttonNumber + '" class="button" onclick="buttonClicked(' + buttonNumber + ')">0</button>');
         }
-      }
-    }
-  </script>
-</div>
+      </script>
+    </td>
+    
+    <td>
+      <!-- Creating buttons for the second cell -->
+      <script>
+        for (var i = 9; i <= 16; i++) {
+          var buttonNumber = i;
+          document.write('<button id="button' + buttonNumber + '" class="button" onclick="buttonClicked(' + buttonNumber + ')">0</button>');
+        }
+      </script>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <!-- Creating buttons for the third cell -->
+      <script>
+        for (var i = 17; i <= 24; i++) {
+          var buttonNumber = i;
+          document.write('<button id="button' + buttonNumber + '" class="button" onclick="buttonClicked(' + buttonNumber + ')">0</button>');
+        }
+      </script>
+    </td>
+
+    <td>
+      <!-- Creating buttons for the fourth cell -->
+      <script>
+        for (var i = 25; i <= 32; i++) {
+          var buttonNumber = i;
+          document.write('<button id="button' + buttonNumber + '" class="button" onclick="buttonClicked(' + buttonNumber + ')">0</button>');
+        }
+      </script>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <!-- Creating buttons for the fifth cell -->
+      <script>
+        for (var i = 33; i <= 40; i++) {
+          var buttonNumber = i;
+          document.write('<button id="button' + buttonNumber + '" class="button" onclick="buttonClicked(' + buttonNumber + ')">0</button>');
+        }
+      </script>
+    </td>
+
+    <td>
+      <!-- Creating buttons for the sixth cell -->
+      <script>
+        for (var i = 41; i <= 48; i++) {
+          var buttonNumber = i;
+          document.write('<button id="button' + buttonNumber + '" class="button" onclick="buttonClicked(' + buttonNumber + ')">0</button>');
+        }
+      </script>
+    </td>
+  </tr>
+</table>
 
 </body>
 </html>
