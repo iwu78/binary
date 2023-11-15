@@ -44,15 +44,6 @@ courses: { compsci: {week: 1} }
           } else {
             button.innerHTML = "0";
           }
-          displayBinaryCombination(resultDiv);
-        }
-        function displayBinaryCombination(resultDiv) {
-          var buttons = document.querySelectorAll("#" + resultDiv + " button");
-          var binaryCombination = "";
-          buttons.forEach(function(button) {
-            binaryCombination += button.innerHTML;
-          });
-          document.getElementById(resultDiv).innerHTML = "Binary Combination: " + binaryCombination;
         }
         for (var i = 1; i <= 8; i++) {
           var buttonNumber = i;
