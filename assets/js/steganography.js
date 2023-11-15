@@ -42,12 +42,18 @@ function processImages() {
             
             var newdata = data1;
             for (let i = 0; i < newdata.length; i += 4) {
-                console.log("0 to 6: " + (data1[i]).toString(2).slice(0, 6))
-                console.log("0 to 2: " + (data2[i / 4]).toString(2).slice(-2))
-                newdata[i] = parseInt((data1[i]).toString(2).slice(0, 6) + (data2[i / 4]).toString(2).slice(-2), 2)
-                newdata[i + 1] = parseInt((data1[i + 1]).toString(2).slice(0, 6) + (data2[Math.floor(i / 4)]).toString(2).slice(4, 6), 2)
-                newdata[i + 2] = parseInt((data1[i + 2]).toString(2).slice(0, 6) + (data2[Math.floor(i / 4)]).toString(2).slice(2, 4), 2)
-                newdata[i + 3] = parseInt((data1[i + 3]).toString(2).slice(0, 6) + (data2[Math.floor(i / 4)]).toString(2).slice(0, 2), 2)
+                var bits2 = [
+                    (data2[i / 4] >> 6) & 0x03,
+                    (data2[i / 4] >> 4) & 0x03,
+                    (data2[i / 4] >> 2) & 0x03,
+                    data2[i / 4] & 0x03
+                ];
+
+                // Combine bits from data1 and bits2
+                newImage.data[i] = (data1[i] & 0xFC) | bits2[0];
+                newImage.data[i + 1] = (data1[i + 1] & 0xFC) | bits2[1];
+                newImage.data[i + 2] = (data1[i + 2] & 0xFC) | bits2[2];
+                newImage.data[i + 3] = (data1[i + 3] & 0xFC) | bits2[3];
             };
 
             newImage.data.set(newdata);
