@@ -103,6 +103,15 @@ courses: { compsci: {week: 1} }
     </td>
   </tr>
 </table>
-
+<script>
+  function displayBinaryCombination(resultDiv) {
+    var buttons = document.querySelectorAll("#" + resultDiv + " button");
+    var binaryCombination = "";
+    buttons.forEach(function(button) {
+      binaryCombination += button.innerHTML;
+    });
+    document.getElementById(resultDiv).innerHTML = "Binary Combination: " + binaryCombination;
+  }
+</script>
 </body>
 </html>
