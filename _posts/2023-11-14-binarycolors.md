@@ -44,14 +44,12 @@ courses: { compsci: {week: 1} }
             button.innerHTML = "0";
           }
         }
-
         for (var i = 1; i <= 8; i++) {
           var buttonNumber = i;
           document.write('<button id="button' + buttonNumber + '" class="button" onclick="buttonClicked(' + buttonNumber + ')">0</button>');
         }
       </script>
-    </td>
-    
+    </td> 
     <td>
       <!-- Creating buttons for the second cell -->
       <script>
@@ -73,7 +71,6 @@ courses: { compsci: {week: 1} }
         }
       </script>
     </td>
-
     <td>
       <!-- Creating buttons for the fourth cell -->
       <script>
@@ -95,7 +92,6 @@ courses: { compsci: {week: 1} }
         }
       </script>
     </td>
-
     <td>
       <!-- Creating buttons for the sixth cell -->
       <script>
