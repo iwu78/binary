@@ -19,9 +19,9 @@ function handleImageUpload(input, callback) {
 function processImages() {
     handleImageUpload(imageInput, function(imageData1) {
         var data1 = imageData1.data;
-        ctx.canvas.height = imageData1.height;
-        ctx.canvas.width = imageData1.width;
-        var decryptedImageData = ctx.createImageData(200, 200);
+        ctx.canvas.height = imageData1.height/2;
+        ctx.canvas.width = imageData1.width/2;
+        var decryptedImageData = ctx.createImageData(imageData1.height/2, imageData1.width/2);
         
         newdata = data1;
 
@@ -40,7 +40,7 @@ function processImages() {
         }
         console.log(newdata)
 
-        ctx.clearRect(0, 0, imageData1.width, imageData1.height);
+        ctx.clearRect(0, 0, imageData1.height/2, imageData1.width/2);
         ctx.putImageData(decryptedImageData, 0, 0);
 
         const resultImage = new Image();
