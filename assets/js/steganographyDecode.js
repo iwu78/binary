@@ -25,23 +25,23 @@ function processImages() {
         
         newdata = data1;
 
-        for (let i = 0; i < data1.length; i += 4) {
+        for (let i = 0, j = 0; i < data1.length; i += 4, j += 1) {
             var pixelValue = (
                 ((data1[i] & 0x03) << 6) |
                 ((data1[i + 1] & 0x03) << 4) |
                 ((data1[i + 2] & 0x03) << 2) |
                 (data1[i + 3] & 0x03)
             );
-
-            decryptedImageData.data[i / 4] = pixelValue;
-            decryptedImageData.data[i / 4 + 1] = pixelValue;
-            decryptedImageData.data[i / 4 + 2] = pixelValue;
-            decryptedImageData.data[i / 4 + 3] = 255; // Alpha channel set to 255
+        
+            decryptedImageData.data[j] = pixelValue;
+            decryptedImageData.data[j + 1] = pixelValue;
+            decryptedImageData.data[j + 2] = pixelValue;
+            decryptedImageData.data[j + 3] = 255; // Alpha channel set to 255
         }
         console.log(newdata)
 
         ctx.clearRect(0, 0, imageData1.height, imageData1.width);
-        ctx.putImageData(decryptedImageData, 0, 0);
+        ctx.putImageData(decryptedImageData, 0, 0, 0, 0, imageData1.width / 2, imageData1.height);
 
         const resultImage = new Image();
         resultImage.src = ctx.canvas.toDataURL();
