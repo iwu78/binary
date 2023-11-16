@@ -2,8 +2,8 @@
 toc: true
 comments: false
 layout: post
-title: Image steganography
-description: Hide an image inside another!
+title: Image Steganography Decoder
+description: Reveal an image inside another!
 type: hacks
 courses: { compsci: {week: 1} }
 ---
