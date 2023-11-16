@@ -38,6 +38,8 @@ function processImages() {
         handleImageUpload(imageInput2, function(imageData2) {
             var data1 = imageData1.data;
             var newImage = imageData1;
+            ctx.canvas.height = newImage.height;
+            ctx.canvas.width = newImage.width;
             var data2 = imageData2.data;
             
             var newdata = data1;
@@ -57,7 +59,7 @@ function processImages() {
             };
 
             newImage.data.set(newdata);
-            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+            ctx.clearRect(0, 0, 200, 200);
             ctx.putImageData(newImage, 0, 0);
 
             const resultImage = new Image();

@@ -8,10 +8,10 @@ type: hacks
 courses: { compsci: {week: 1} }
 ---
 
-<h1><strong>Upload an Image</strong></h1>
+<h1><strong>Upload Two Images!</strong></h1>
 <input type="file" id="imageInput" accept="image/*">
 <input type="file" id="imageInput2" accept="image/*">
-<button id="andButton">Encrypt/Decrypt Image</button>
+<button id="andButton">Hide Image</button>
 <br>
 <div id='resultDiv'></div>
-<script src="../../../assets/js/steganography.js" type="text/javascript"></script>
+<script src="../../../assets/js/steganographyEncrypt.js" type="text/javascript"></script>

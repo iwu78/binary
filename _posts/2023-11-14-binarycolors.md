@@ -60,7 +60,10 @@ courses: { compsci: {week: 1} }
           } else {
             button.innerHTML = "0";
           }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 96cc60e5bcec96000f58e805af45063d756a5626
         }
       </script>
     </td>
