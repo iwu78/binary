@@ -26,15 +26,15 @@ courses: { compsci: {week: 1} }
   <tr>
     <td>
     <p>First color</p>
-    <p id="num10">0</p>
-    <p id="num11">0</p>
-    <p id="num12">0</p>
+    <p id="num1">0</p>
+    <p id="num2">0</p>
+    <p id="num3">0</p>
     </td>
     <td>
     <p>Second color</p>
-    <p id="num20">0</p>
-    <p id="num21">0</p>
-    <p id="num22">0</p>
+    <p id="num4">0</p>
+    <p id="num5">0</p>
+    <p id="num6">0</p>
     </td>
   </tr>
   
@@ -55,9 +55,15 @@ courses: { compsci: {week: 1} }
           var button = document.getElementById("button" + buttonNumber);
           if (button.innerHTML === "0") {
             button.innerHTML = "1";
+            var val = document.getElementById("num"+Math.floor((buttonNumber-1)/8)+1);
+            val.innerHTML = parseInt(var.innerHTML) + 
           } else {
             button.innerHTML = "0";
           }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 96cc60e5bcec96000f58e805af45063d756a5626
         }
       </script>
     </td>
