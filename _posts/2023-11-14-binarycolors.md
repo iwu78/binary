@@ -27,13 +27,13 @@ courses: { compsci: {week: 1} }
     <td>
     <p>First color</p>
     <p id="num1">0</p>
-    <p id="num2">0</p>
     <p id="num3">0</p>
+    <p id="num5">0</p>
     </td>
     <td>
     <p>Second color</p>
+    <p id="num2">0</p>
     <p id="num4">0</p>
-    <p id="num5">0</p>
     <p id="num6">0</p>
     </td>
   </tr>
@@ -50,22 +50,6 @@ courses: { compsci: {week: 1} }
   <button id="button6" class="button" onclick="buttonClicked(6)">0</button>
   <button id="button7" class="button" onclick="buttonClicked(7)">0</button>
   <button id="button8" class="button" onclick="buttonClicked(8)">0</button>
-      <script>
-        function buttonClicked(buttonNumber) {
-          var button = document.getElementById("button" + buttonNumber);
-          if (button.innerHTML === "0") {
-            button.innerHTML = "1";
-            var val = document.getElementById("num"+Math.floor((buttonNumber-1)/8)+1);
-            val.innerHTML = parseInt(var.innerHTML) + 
-          } else {
-            button.innerHTML = "0";
-          }
-<<<<<<< HEAD
-
-=======
->>>>>>> 96cc60e5bcec96000f58e805af45063d756a5626
-        }
-      </script>
     </td>
     <td>
       <!-- Creating buttons for the second cell -->
@@ -96,7 +80,7 @@ courses: { compsci: {week: 1} }
     </td>
     <td>
       <!-- Creating buttons for the fourth cell -->
-      <p style="color:green">B</p>
+      <p style="color:green">G</p>
       <button id="button25" class="button" onclick="buttonClicked(25)">0</button>
   <button id="button26" class="button" onclick="buttonClicked(26)">0</button>
   <button id="button27" class="button" onclick="buttonClicked(27)">0</button>
@@ -112,7 +96,7 @@ courses: { compsci: {week: 1} }
     <td>
       <!-- Creating buttons for the fifth cell -->
       <p style="color:blue">B</p>
-      <button id="button33" class="button" onclick="buttonClicked(33))">0</button>
+      <button id="button33" class="button" onclick="buttonClicked(33)">0</button>
   <button id="button34" class="button" onclick="buttonClicked(34)">0</button>
   <button id="button35" class="button" onclick="buttonClicked(35)">0</button>
   <button id="button36" class="button" onclick="buttonClicked(36)">0</button>
@@ -135,5 +119,22 @@ courses: { compsci: {week: 1} }
     </td>
   </tr>
 </table>
+<script>
+        function buttonClicked(buttonNumber) {
+          var button = document.getElementById("button" + buttonNumber);
+          if (button.innerHTML === "0") {
+            button.innerHTML = "1";
+            var val = document.getElementById("num"+String(Math.floor((buttonNumber-1)/8)+1));
+            val.innerHTML = String(parseInt(val.innerHTML) + Math.floor(2**((((8-buttonNumber)%8)+8)%8)));
+            console.log(val)
+            console.log(-13%8)
+          } else {
+            button.innerHTML = "0";
+            var val = document.getElementById("num"+String(Math.floor((buttonNumber-1)/8)+1));
+            val.innerHTML = String(parseInt(val.innerHTML) - Math.floor(2**((((8-buttonNumber)%8)+8)%8)));
+            console.log(val)
+          }
+          };
+</script>
 </body>
 </html>
