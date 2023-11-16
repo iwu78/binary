@@ -44,3 +44,5 @@ We plan to finish up steganography after one of the two pairs has finished their
  - Finish up design and polish website to ready for presentation
 
 An existing page design and homepage plan can be found below.
+![homepage1](../../../images/homepage1.png)
+![homepage2](../../../images/homepage2.png)
