@@ -36,8 +36,10 @@ We plan to finish up steganography after one of the two pairs has finished their
 #### Timeline
 > Week 1
  - Create plans, assign work, start work on features
+
 > Week 2
  - Finish up JavaScript of features, potentially start on steganography or explore more features. Start on CSS and design of website
+
 > Week 3
  - Finish up design and polish website to ready for presentation
 
