@@ -58,7 +58,6 @@ courses: { compsci: {week: 1} }
           } else {
             button.innerHTML = "0";
           }
-          
         }
       </script>
     </td>
