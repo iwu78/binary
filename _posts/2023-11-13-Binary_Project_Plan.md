@@ -24,6 +24,7 @@ After seeing how messed up ANDed images were, we had the idea to encrypt, or obf
 Another usage of binary in images that we explored is steganography. We research LSB steganography, which is using the least significant bit of an image and changing it to hide information, since it will not change the output of the image by a lot. However, we found many of these sites online and wanted to explore something new, hiding images inside other images. We plan to do this by increasing the base image by a factor of 2, increasing the pixel count by a factor of 4. This gives us 4 bits for each color of the hidden image, but by using the two least significant bits, we can get 8 bits per color, which is enough to encode a 255x255x255. With some testing, we learned that changing the value of a color by 4 bits does not result in a major change, which is good for this idea.
 
 #### Diagram Here
+![planDiagram](../../../images/binaryplan.png)
 
 ## Schedule, Pairs
 Pair 1 - Ian, Srijan
