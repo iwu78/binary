@@ -1,7 +1,6 @@
-const key = "HACK";
- 
+
 // Encryption
-function encryptMessage(msg) {
+function encryptMessage(msg, key) {
     let cipher = "";
  
     // track key indices
@@ -44,7 +43,7 @@ function encryptMessage(msg) {
 }
  
 // Decryption
-function decryptMessage(cipher) {
+function decryptMessage(cipher, key) {
     let msg = "";
  
     // track key indices
@@ -92,15 +91,8 @@ function decryptMessage(cipher) {
         throw new Error("This program cannot handle repeating words.");
     }
  
-    const null_count = (msg.match(/_/g) || []).length;
- 
-    if (null_count > 0) {
-        return msg.slice(0, -null_count);
-    }
- 
     return msg;
 }
-var myrng = new Math.seedrandom(document.getElementById('seed').value);
 const imageInput = document.getElementById('imageInput');
 const resultDiv = document.getElementById('resultDiv');
 const ctx = document.createElement('canvas').getContext('2d');
@@ -122,22 +114,45 @@ function handleImageUpload(input, callback) {
 }
 function processImages() {
     handleImageUpload(imageInput, function(imageData1) {
-            var data1 = imageData1.data
-            var newImage = imageData1
-            console.log(data1)
-            var newdata = new Uint8ClampedArray(data1.length);
-            var bitrow = '';
-            for (let i = 0; i < data1.length; i += 1 ) {
-                bitrow = bitrow + data1[i].toString(2);
+        var data1 = imageData1.data;
+        var newImage = imageData1;
+        var newdata = new Uint8ClampedArray(data1.length);
+        var bitrow = '';
+
+        for (let i = 0; i < data1.length; i += 1) {
+            let zerostr = ''
+            let numzeros = 8 - (data1[i].toString(2)).length
+            for (let j = 0; j < numzeros; j += 1) {
+                zerostr = zerostr + '0'
             }
-            newImage.data.set(newdata)
-            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-            ctx.putImageData(newImage, 0, 0);
-            const resultImage = new Image();
-            resultImage.src = ctx.canvas.toDataURL();
-            resultDiv.innerHTML = '';
-            resultDiv.appendChild(resultImage);
+            bitrow = bitrow + zerostr + (data1[i].toString(2));
+        }
+        if (document.getElementById('operation').value == 'decrypt') {
+            var encrypted = decryptMessage(bitrow, document.getElementById('seed').value);
+        } else {
+            var encrypted = encryptMessage(bitrow, document.getElementById('seed').value);
+        }
+        var array = encrypted.match(/.{8}/g);
+
+        for (let j = 0; j < array.length; j += 1) {
+            newdata[j] = parseInt(array[j], 2);
+        }
+
+        ctx.canvas.width = newImage.width;  // Adjust canvas width
+        ctx.canvas.height = newImage.height; // Adjust canvas height
+
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        ctx.putImageData(newImage, 0, 0, 0, 0, newImage.width, newImage.height); // Include width and height
+
+        newImage.data.set(newdata);
+        ctx.putImageData(newImage, 0, 0, 0, 0, newImage.width, newImage.height);
+
+        const resultImage = new Image();
+        resultImage.src = ctx.canvas.toDataURL();
+        resultDiv.innerHTML = '';
+        resultDiv.appendChild(resultImage);
     });
 }
+
 const andButton = document.getElementById('andButton');
 andButton.addEventListener('click', processImages);
