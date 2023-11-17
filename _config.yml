@@ -1,13 +1,14 @@
 title: Nighthawk-Pages
 description: "August 2023 to June 2024"
 owner_name: Ian W.
-github_username: iwu_78
+github_username: iwu78
+github_username2: monke7760
+github_username3: RyanZLiu
+github_username4: SrijDude3416
 github_repo: "Nighthawk-Pages"
 baseurl: "/binary"
-remote_theme: jekyll/minima
-minima:
-  social_links:
-    - { platform: github, user_url: "https://github.com/iwu78"}
+# remote_theme: jekyll/minima
+remote_theme: thedevslot/WhatATheme
 # remote_theme: pages-themes/dinky@v0.2.0
 # remote_theme: pages-themes/minimal@v0.2.0
 # remote_theme: pages-themes/hacker@v0.2.0
