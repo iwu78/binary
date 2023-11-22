@@ -26,22 +26,17 @@ courses: { compsci: {week: 1} }
   <tr>
     <td>
     <p>First color</p>
-    <p id="num1">0</p>
-    <p id="num3">0</p>
-    <p id="num5">0</p>
     </td>
     <td>
     <p>Second color</p>
-    <p id="num2">0</p>
-    <p id="num4">0</p>
-    <p id="num6">0</p>
     </td>
   </tr>
   
   <tr>
     <td>
       <!-- Creating buttons for the first cell -->
-      <p style="color:red">R</p>
+      <h2 style="color:red">R</h2>
+      <p id="num1">0</p>
   <button id="button1" class="button" onclick="buttonClicked(1)">0</button>
   <button id="button2" class="button" onclick="buttonClicked(2)">0</button>
   <button id="button3" class="button" onclick="buttonClicked(3)">0</button>
@@ -53,7 +48,8 @@ courses: { compsci: {week: 1} }
     </td>
     <td>
       <!-- Creating buttons for the second cell -->
-      <p style="color:red">R</p>
+      <h2 style="color:red">R</h2>
+      <p id="num2">0</p>
       <button id="button9" class="button" onclick="buttonClicked(9)">0</button>
   <button id="button10" class="button" onclick="buttonClicked(10)">0</button>
   <button id="button11" class="button" onclick="buttonClicked(11)">0</button>
@@ -68,7 +64,8 @@ courses: { compsci: {week: 1} }
   <tr>
     <td>
       <!-- Creating buttons for the third cell -->
-      <p style="color:green">G</p>
+      <h2 style="color:green">G</h2>
+      <p id="num3">0</p>
       <button id="button17" class="button" onclick="buttonClicked(17)">0</button>
   <button id="button18" class="button" onclick="buttonClicked(18)">0</button>
   <button id="button19" class="button" onclick="buttonClicked(19)">0</button>
@@ -80,7 +77,8 @@ courses: { compsci: {week: 1} }
     </td>
     <td>
       <!-- Creating buttons for the fourth cell -->
-      <p style="color:green">G</p>
+      <h2 style="color:green">G</h2>
+      <p id="num4">0</p>
       <button id="button25" class="button" onclick="buttonClicked(25)">0</button>
   <button id="button26" class="button" onclick="buttonClicked(26)">0</button>
   <button id="button27" class="button" onclick="buttonClicked(27)">0</button>
@@ -95,7 +93,8 @@ courses: { compsci: {week: 1} }
   <tr>
     <td>
       <!-- Creating buttons for the fifth cell -->
-      <p style="color:blue">B</p>
+      <h2 style="color:blue">B</h2>
+      <p id="num5">0</p>
       <button id="button33" class="button" onclick="buttonClicked(33)">0</button>
   <button id="button34" class="button" onclick="buttonClicked(34)">0</button>
   <button id="button35" class="button" onclick="buttonClicked(35)">0</button>
@@ -107,7 +106,8 @@ courses: { compsci: {week: 1} }
     </td>
     <td>
       <!-- Creating buttons for the sixth cell -->
-      <p style="color:blue">B</p>
+      <h2 style="color:blue">B</h2>
+      <p id="num6">0</p>
       <button id="button41" class="button" onclick="buttonClicked(41)">0</button>
   <button id="button42" class="button" onclick="buttonClicked(42)">0</button>
   <button id="button43" class="button" onclick="buttonClicked(43)">0</button>
