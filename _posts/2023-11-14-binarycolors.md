@@ -10,8 +10,8 @@ courses: { compsci: {week: 1} }
 
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css.css">
-</head>
+  <meta charset="utf-8">
+ </head>
 <body>
 
 <style>
@@ -119,6 +119,7 @@ courses: { compsci: {week: 1} }
     </td>
   </tr>
 </table>
+</body>
 <script>
         function buttonClicked(buttonNumber) {
           var button = document.getElementById("button" + buttonNumber);
@@ -126,15 +127,11 @@ courses: { compsci: {week: 1} }
             button.innerHTML = "1";
             var val = document.getElementById("num"+String(Math.floor((buttonNumber-1)/8)+1));
             val.innerHTML = String(parseInt(val.innerHTML) + Math.floor(2**((((8-buttonNumber)%8)+8)%8)));
-            console.log(val)
-            console.log(-13%8)
           } else {
             button.innerHTML = "0";
             var val = document.getElementById("num"+String(Math.floor((buttonNumber-1)/8)+1));
             val.innerHTML = String(parseInt(val.innerHTML) - Math.floor(2**((((8-buttonNumber)%8)+8)%8)));
-            console.log(val)
           }
           };
 </script>
-</body>
 </html>
