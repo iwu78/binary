@@ -10,8 +10,8 @@ courses: { compsci: {week: 1} }
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
- </head>
+  <link rel="stylesheet" href="css.css">
+</head>
 <body>
 
 <style>
@@ -20,8 +20,14 @@ courses: { compsci: {week: 1} }
     padding: 10px;
     box-sizing: border-box;
   }
+  .colorBox {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+  }
 </style>
-
+<div class="colorBox" id="colorBox1"></div>
+<div class="colorBox" id="colorBox2"></div>
 <table>
   <tr>
     <td>
@@ -132,6 +138,20 @@ courses: { compsci: {week: 1} }
             var val = document.getElementById("num"+String(Math.floor((buttonNumber-1)/8)+1));
             val.innerHTML = String(parseInt(val.innerHTML) - Math.floor(2**((((8-buttonNumber)%8)+8)%8)));
           }
-          };
+          updateColor();
+        }
+        function updateColor() {
+          var r1 = parseInt(document.getElementById("num1").innerHTML, 2);
+          var g1 = parseInt(document.getElementById("num3").innerHTML, 2);
+          var b1 = parseInt(document.getElementById("num5").innerHTML, 2);
+          var r2 = parseInt(document.getElementById("num2").innerHTML, 2);
+          var g2 = parseInt(document.getElementById("num4").innerHTML, 2);
+          var b2 = parseInt(document.getElementById("num6").innerHTML, 2);
+          var colorBox1 = document.getElementById("colorBox1");
+          colorBox1.style.backgroundColor = "rgb("+r1+","+g1+","+b1+")";
+          var colorBox2 = document.getElementById("colorBox2");
+          colorBox2.style.backgroundColor = "rgb("+r2+","+g2+","+b2+")";
+        }
+        updateColor();
 </script>
 </html>
