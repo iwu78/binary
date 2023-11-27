@@ -7,6 +7,7 @@ github_username3: RyanZLiu
 github_username4: SrijDude3416
 github_repo: "Nighthawk-Pages"
 baseurl: "/binary"
+site-image: "/assets/images/background.jpg"
 # remote_theme: jekyll/minima
 remote_theme: thedevslot/WhatATheme
 # remote_theme: pages-themes/dinky@v0.2.0
