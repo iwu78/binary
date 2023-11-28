@@ -31,7 +31,7 @@ function handleImageUpload2(input, callback) {
         };
         image.src = e.target.result;
     };
-    reader.readAsDataURL(file);
+    reader.readAsDataURL(file)
 }
 function processImages() {
     handleImageUpload2(imageInput, function(imageData1) {
