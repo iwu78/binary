@@ -141,12 +141,12 @@ courses: { compsci: {week: 1} }
           updateColor();
         }
         function updateColor() {
-          var r1 = parseInt(document.getElementById("num1").innerHTML, 10);
-          var g1 = parseInt(document.getElementById("num3").innerHTML, 10);
-          var b1 = parseInt(document.getElementById("num5").innerHTML, 10);
-          var r2 = parseInt(document.getElementById("num2").innerHTML, 10);
-          var g2 = parseInt(document.getElementById("num4").innerHTML, 10);
-          var b2 = parseInt(document.getElementById("num6").innerHTML, 10);
+          var r1 = parseInt(document.getElementById("num1").innerHTML);
+          var g1 = parseInt(document.getElementById("num3").innerHTML);
+          var b1 = parseInt(document.getElementById("num5").innerHTML);
+          var r2 = parseInt(document.getElementById("num2").innerHTML);
+          var g2 = parseInt(document.getElementById("num4").innerHTML);
+          var b2 = parseInt(document.getElementById("num6").innerHTML);
           var colorBox1 = document.getElementById("colorBox1");
           colorBox1.style.backgroundColor = "rgb("+r1+","+g1+","+b1+")";
           var colorBox2 = document.getElementById("colorBox2");
