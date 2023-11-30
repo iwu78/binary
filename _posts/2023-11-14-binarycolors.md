@@ -28,6 +28,8 @@ courses: { compsci: {week: 1} }
 </style>
 <div class="colorBox" id="colorBox1"></div>
 <div class="colorBox" id="colorBox2"></div>
+<p>ANDed color!</p>
+<div class="colorBox" id="colorBox3"></div>
 <table>
   <tr>
     <td>
@@ -151,10 +153,12 @@ courses: { compsci: {week: 1} }
           colorBox1.style.backgroundColor = "rgb("+r1+","+g1+","+b1+")";
           var colorBox2 = document.getElementById("colorBox2");
           colorBox2.style.backgroundColor = "rgb("+r2+","+g2+","+b2+")";
+          var colorBox3 = document.getElementById("colorBox3");
+          var r3 = r1 & r2;
+          var g3 = g1 & g2;
+          var b3 = b1 & b2;
+          colorBox3.style.backgroundColor = "rgb("+r3+","+g3+","+b3+")";
         }
         updateColor();
-        var r3 = r1 & r2
-        var g3 = g1 & g2
-        var b3 = b1 & b2
 </script>
 </html>
