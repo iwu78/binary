@@ -24,6 +24,8 @@ courses: { compsci: {week: 1} }
     width: 200px;
     height: 200px;
     margin: 10px;
+    display: inline-block;
+
   }
 </style>
 <div class="colorBox" id="colorBox1"></div>
