@@ -25,13 +25,12 @@ courses: { compsci: {week: 1} }
     height: 200px;
     margin: 10px;
     display: inline-block;
-
   }
 </style>
 <div class="colorBox" id="colorBox1"></div>
 <div class="colorBox" id="colorBox2"></div>
-<p>ANDed color!</p>
 <div class="colorBox" id="colorBox3"></div>
+<p>‍‍‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍First color ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍Second color ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ANDed color!</p> 
 <table>
   <tr>
     <td>
