@@ -2,17 +2,14 @@
 toc: true
 comments: false
 layout: post
-title: Funny button clicking
-description: There are 48 buttons. Click them, thank you very much
+title: Funny Button Clicking
+description: Intermediate for the anding colors page. We just started with 48 buttons, have fun clicking them all!
 type: hacks
 courses: { compsci: {week: 1} }
 ---
 
-<html lang="en">
-<head>
-  <link rel="stylesheet" href="css.css">
-</head>
-<body>
+
+
 
 <div class="button-container">
   <!-- Row 1 -->
@@ -76,16 +73,6 @@ courses: { compsci: {week: 1} }
   <button class="button" onclick="buttonClicked(48)">Button 48</button>
 </div>
 
-<script>
-  function buttonClicked(buttonNumber) {
-    var button = document.querySelector(".button-container button:nth-child(" + buttonNumber + ")");
-    if (button.innerHTML === "0") {
-      button.innerHTML = "1";
-    } else {
-      button.innerHTML = "0";
-    }
-  }
-</script>
+<p class="hidden">711180478761414067560941216442969585394430774184973780254</p>
 
-</body>
-</html>
+<script src="../../../assets/js/buttonclick.js" type="text/javascript"></script>

@@ -11,6 +11,10 @@
     font-weight: 600;
 }
 
+.hidden {
+    color: white;
+}
+
 .navbar-dropdown {
     border: none;
     right: 0;
@@ -82,6 +86,7 @@ a.navbar-item.is-active {
         min-width: 25vmax;
         margin: 0.5rem;
     }
+    height: 100px;
 }
 
 #contact {
