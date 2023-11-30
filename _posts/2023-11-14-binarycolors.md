@@ -24,10 +24,13 @@ courses: { compsci: {week: 1} }
     width: 200px;
     height: 200px;
     margin: 10px;
+    display: inline-block;
   }
 </style>
 <div class="colorBox" id="colorBox1"></div>
 <div class="colorBox" id="colorBox2"></div>
+<div class="colorBox" id="colorBox3"></div>
+<p>‍‍‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍First color ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍Second color ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ANDed color!</p> 
 <table>
   <tr>
     <td>
@@ -141,16 +144,21 @@ courses: { compsci: {week: 1} }
           updateColor();
         }
         function updateColor() {
-          var r1 = parseInt(document.getElementById("num1").innerHTML, 2);
-          var g1 = parseInt(document.getElementById("num3").innerHTML, 2);
-          var b1 = parseInt(document.getElementById("num5").innerHTML, 2);
-          var r2 = parseInt(document.getElementById("num2").innerHTML, 2);
-          var g2 = parseInt(document.getElementById("num4").innerHTML, 2);
-          var b2 = parseInt(document.getElementById("num6").innerHTML, 2);
+          var r1 = parseInt(document.getElementById("num1").innerHTML);
+          var g1 = parseInt(document.getElementById("num3").innerHTML);
+          var b1 = parseInt(document.getElementById("num5").innerHTML);
+          var r2 = parseInt(document.getElementById("num2").innerHTML);
+          var g2 = parseInt(document.getElementById("num4").innerHTML);
+          var b2 = parseInt(document.getElementById("num6").innerHTML);
           var colorBox1 = document.getElementById("colorBox1");
           colorBox1.style.backgroundColor = "rgb("+r1+","+g1+","+b1+")";
           var colorBox2 = document.getElementById("colorBox2");
           colorBox2.style.backgroundColor = "rgb("+r2+","+g2+","+b2+")";
+          var colorBox3 = document.getElementById("colorBox3");
+          var r3 = r1 & r2;
+          var g3 = g1 & g2;
+          var b3 = b1 & b2;
+          colorBox3.style.backgroundColor = "rgb("+r3+","+g3+","+b3+")";
         }
         updateColor();
 </script>
