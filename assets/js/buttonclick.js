@@ -1,5 +1,5 @@
-var buttonStates = Array(48).fill(0); // Initialize an array to track button states
-var asciiMessage = "unerd!"; // 6-character ASCII message
+var buttonStates = Array(48).fill(0);
+var asciiMessage = "unerd!";
 function buttonClicked(buttonNumber) {
   var button = document.querySelector(".button-container button:nth-child(" + buttonNumber + ")");
   if (button.innerHTML === "0") {
@@ -20,12 +20,19 @@ function checkAllButtonsClicked() {
   }
 }
 
+function text2Binary(string) {
+    return string.split('').map(function (char) {
+        return char.charCodeAt(0).toString(2);
+    }).join('');
+}
+
 function hideMessageInButtons() {
   var messageIndex = 0;
 
   for (var i = 1; i <= 48; i++) {
+    binaryMessage = text2Binary(asciiMessage).replace(" ", "")
     var button = document.querySelector(".button-container button:nth-child(" + i + ")");
-    button.innerHTML = asciiMessage[messageIndex];
-    messageIndex = (messageIndex + 1) % asciiMessage.length;
+    button.innerHTML = binaryMessage[messageIndex];
+    messageIndex = (messageIndex + 1) % binaryMessage.length;
   }
 }
