@@ -81,7 +81,11 @@ courses: { compsci: {week: 1} }
   <button class="button button-89" onclick="buttonClicked(44)">Button 44</button>
   <button class="button button-49" onclick="buttonClicked(45)">Button 45</button>
   <button class="button button-73" onclick="buttonClicked(46)">Button 46</button>
-  <button class="button button-94" onclick="buttonClicked(47)">Button 47</button>
+  <button class="button button-94" onclick="buttonClicked(47)"><span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span>Button 47</span></button>
   <button class="button button-30" onclick="buttonClicked(48)">Button 48</button>
 </div>
 
