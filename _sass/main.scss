@@ -12,6 +12,9 @@ $animation:0.3s all ease;
 $cyan: #0fe0f5;
 $dark: #222;
 $borderW: 6px;
+$bgColor: blue;
+$textHoverColor: white;
+$debug: false;
 
 html,
 body {
@@ -1909,6 +1912,53 @@ body {
     border-radius: 50%;
     animation: animateC 2s linear infinite;
   }
+
+  .button-102 {
+    padding: 0.6em 0.9em;
+    font-size: 1em;
+    background-color: transparent;
+    border: 0.2em solid;
+    border-color: #00ffff #04ff00 #0051ff #d400ff;
+    border-radius: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-radius 0.2s ease, color 0.2s ease,
+      border-shadow 0.2s ease, border-style 0.2s ease;
+  }
+  
+  .button-102:hover {
+    transform: scale(1.3);
+    border-radius: 1.5em;
+    animation: btn-animation 0.4s 0.2s linear infinite;
+    color: #00ddff;
+  }
+  
+  @keyframes btn-animation {
+    0% {
+      border-color: #00ffff #04ff00 #0051ff #d400ff;
+      transform: rotate(5deg) scale(1.3);
+    }
+  
+    25% {
+      border-color: #d400ff #00ffff #04ff00 #0051ff;
+      transform: rotate(-5deg) scale(1.3);
+    }
+  
+    50% {
+      border-color: #0051ff #d400ff #00ffff #04ff00;
+      transform: rotate(5deg) scale(1.3);
+    }
+  
+    75% {
+      border-color: #04ff00 #0051ff #d400ff #00ffff;
+      transform: rotate(-5deg) scale(1.3);
+    }
+  
+    100% {
+      border-color: #00ffff #04ff00 #0051ff #d400ff;
+      transform: rotate(5deg) scale(1.3);
+    }
+  }
   
   @keyframes animateC {
     0% {
@@ -1919,6 +1969,397 @@ body {
       transform: rotate(360deg);
     }
   }  
+
+  .button-103 {
+    position: relative;
+    border: 0;
+    padding: 1em 2em;
+    font-weight: 700;
+    cursor: pointer;
+    outline: .5em solid #fff;
+    outline-offset: -.3em;
+    color: #fff;
+    background-color: #333;
+    text-transform: uppercase;
+  }
+  
+  .button-103:hover {
+    animation: shake 500ms infinite,glitch 400ms infinite steps(4);
+  }
+  
+  @keyframes shake {
+    0% {
+    }
+  
+    25% {
+      transform: translate(-.1em,-.1em);
+    }
+  
+    50% {
+      transform: translate(.3em,0);
+    }
+  
+    75% {
+      transform: translate(0,.3em);
+    }
+  
+    100% {
+    }
+  }
+  
+  @keyframes glitch {
+    from {
+      box-shadow: .8em .8em  rgb(240, 84, 219),
+    -.8em -.8em rgb(84, 240, 232);
+    }
+  
+    to {
+      text-shadow: .3em .2em  rgb(240, 84, 219),
+    -.3em -.2em rgb(84, 240, 232);
+    }
+  }
+
+  .button-104 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 8px;
+    height: 65px;
+    width: 200px;
+    padding: 12px;
+    border-radius: 15px 15px 12px 12px;
+    cursor: pointer;
+    position: relative;
+    will-change: transform;
+    transition: all .1s ease-in-out 0s;
+    user-select: none;
+    /* Add gradient shading to each side */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    background-position: bottom right, bottom right;
+    background-size: 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: inset -4px -10px 0px rgba(255, 255, 255, 0.4),
+      inset -4px -8px 0px rgba(0, 0, 0, 0.3),
+      0px 2px 1px rgba(0, 0, 0, 0.3),
+      0px 2px 1px rgba(255, 255, 255, 0.1);
+    transform: perspective(70px) rotateX(5deg) rotateY(0deg);
+  }
+  
+  .button-104 span {
+    transform: translateY(-10px);
+  }
+  
+  .button-104::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+    z-index: -1;
+    border-radius: 15px;
+    box-shadow: inset 4px 0px 0px rgba(255, 255, 255, 0.1),
+      inset 4px -8px 0px rgba(0, 0, 0, 0.3);
+    transition: all .1s ease-in-out 0s;
+  }
+  
+  .button-104::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    background-position: bottom right, bottom right;
+    background-size: 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 15px;
+    transition: all .1s ease-in-out 0s;
+  }
+  
+  .button-104:active {
+    will-change: transform;
+    transform: perspective(80px) rotateX(5deg) rotateY(1deg) translateY(3px) scale(0.96);
+    height: 64px;
+    border: 0.25px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset -4px -8px 0px rgba(255, 255, 255, 0.2),
+      inset -4px -6px 0px rgba(0, 0, 0, 0.8),
+      0px 1px 0px rgba(0, 0, 0, 0.9),
+      0px 1px 0px rgba(255, 255, 255, 0.2);
+    transition: all .1s ease-in-out 0s;
+  }
+  
+  .button-104::after:active {
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2));
+  }
+  
+  .button-104:active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    width: 50%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    animation: overlay 0.1s ease-in-out 0s;
+    pointer-events: none;
+  }
+  
+  @keyframes overlay {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .button-104:focus {
+    outline: none;
+  }
+
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+.d-1 {
+    --c: #1095c1; /* the color */
+    --b: .1em;    /* border length*/
+    --d: 20px;    /* the cube depth */
+    --h: 1.2em;   /* the height */
+    
+    --_s: calc(var(--d) + var(--b));
+  
+    line-height: var(--h);
+    color: #0000;
+    text-shadow: 
+      0 calc(-1*var(--_t,0em)) var(--c), 
+      0 calc(var(--h) - var(--_t,0em)) #fff;
+    border: solid #0000;
+    overflow: hidden;
+    border-width: var(--b) var(--b) var(--_s) var(--_s);
+    background:
+      linear-gradient(var(--c) 0 0) 100% 100%
+       /101% var(--_p,0%) no-repeat,
+      conic-gradient(at left var(--d)  bottom var(--d),
+        #0000 90deg, rgba(255, 255, 255, 0.3) 0 225deg,rgba(255, 255, 255, 0.6) 0) border-box,
+      conic-gradient(at left var(--_s) bottom var(--_s),
+        #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+    transform: translate(calc(var(--d)/-1),var(--d));
+    clip-path: 
+      polygon(
+       var(--d) 0%, 
+       var(--d) 0%, 
+       100% 0%, 
+       100% calc(100% - var(--d)),
+       100% calc(100% - var(--d)),
+       var(--d) calc(100% - var(--d))
+      );
+    transition: 0.5s;
+  }
+  .d-1:hover {
+    transform: translate(0,0);
+    clip-path: 
+      polygon(
+       0% var(--d), 
+       var(--d) 0%, 
+       100% 0%, 
+       100% calc(100% - var(--d)), 
+       calc(100% - var(--d)) 100%, 
+       0% 100%
+     );
+    --_t: var(--h);
+    --_p: 105%;
+  }
+
+  .button-105 {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	overflow: if($debug, unset, hidden);
+	
+	text-decoration: none;
+	
+	font-family: sans-serif;
+	font-weight: 600;
+	font-size: 2em;
+	
+	padding: 0.75em 1em;
+	
+	color: $bgColor;
+	
+	border: 0.15em solid $bgColor;
+	border-radius: calc(0.75em + 0.5em + 0.15em);
+	
+	transition: 4s;
+	
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: -1.5em;
+		
+		z-index: -1;
+		
+		width: 200%;
+		aspect-ratio: 1;
+		
+		border: if($debug, inherit, none);
+		border-radius: 40%;
+		
+		background-color: rgba($bgColor, 0.25);
+		
+		transition: 4s;
+	}
+	
+	&:before {
+		left: -80%;
+		transform: translate3d(0, 5em, 0) rotate(-340deg);
+	}
+	
+	&:after {
+		right: -80%;
+		transform: translate3d(0, 5em, 0) rotate(390deg);
+	}
+	
+	&:hover,
+	&:focus {
+		color: $textHoverColor;
+		
+		&:before,
+		&:after {
+			transform: none;
+			background-color: rgba($bgColor, 0.75);
+		}
+	}
+}
+
+:root {
+    --color-red: #ec1840;
+    --color-purple: #7a18ec;
+    --color-white: #fff;
+    --color-black-1: #111;
+    --color-black-2: #222;
+    --color-black-3: #444;
+    --speed-normal: 0.5s;
+    --speed-fast: 0.8s;
+  }
+  .button-106 {
+    position: relative;
+    border-radius: 20px;
+    border: 4px solid red;
+    background-color: white;
+    color: black;
+    width: 180px;
+    height: 60px;
+    margin: 20px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    transition: var(--speed-normal);
+    border: 1px solid var(--color-red);
+    &:hover {
+      border: 1px solid transparent;
+      background: var(--color-red) url(https://i.postimg.cc/wBXGXbWN/pixel.png); // 360px x 1080px
+      transition-delay: 0.8s;
+      background-size: 180px;
+      animation: animate var(--speed-fast) steps(8) forwards;
+    }
+    &:last-of-type {
+      border: 1px solid var(--color-purple);
+      &:hover {
+        background: var(--color-purple) url(https://i.postimg.cc/FzBWFtKM/pixel2.png); // 360px x 1080px
+      }
+    }
+  }
+  @keyframes animate {
+    0% {
+      background-position-y: 0;
+    }
+    100% {
+      background-position-y: -480px;
+    }
+  }
+  
+
 /* width */
 ::-webkit-scrollbar {
     width: 0.5vmax !important;

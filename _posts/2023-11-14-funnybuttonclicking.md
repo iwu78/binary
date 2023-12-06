@@ -108,19 +108,15 @@ courses: { compsci: {week: 1} }
   <button class="button btn3" onclick="buttonClicked(26)">Button 26</button>
   <button class="button ui-btn" onclick="buttonClicked(27)"><span>Button 27</span></button>
   <button class="button botao" onclick="buttonClicked(28)">Button 28</button>
-  <button class="button button-91" onclick="buttonClicked(29)">Button 29</button>
-  <button class="button animated-button" onclick="buttonClicked(30)">Button 30</button>
-  <button class="button button-94" onclick="buttonClicked(31)"><span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span>Button 31</span></button>
-  <button class="button button-90 bn" onclick="buttonClicked(32)">Button 32</button>
+  <button class="button button-102" onclick="buttonClicked(29)">Button 29</button>
+  <button class="button button-103" onclick="buttonClicked(30)">Button 30</button>
+  <button class="button button-104" onclick="buttonClicked(31)">Button 31</button>
+  <button class="button button-86" onclick="buttonClicked(32)">Button 32</button>
 
   <!-- Row 5 -->
-  <button class="button button-30" onclick="buttonClicked(33)">Button 33</button>
-  <button class="button button-53" onclick="buttonClicked(34)">Button 34</button>
-  <button class="button button-57" onclick="buttonClicked(35)">Button 35</button>
+  <button class="button d-1" onclick="buttonClicked(33)">Button 33</button>
+  <button class="button button-105" onclick="buttonClicked(34)">Button 34</button>
+  <button class="button button-106" onclick="buttonClicked(35)">Button 35</button>
   <button class="button button-85" onclick="buttonClicked(36)">Button 36</button>
   <button class="button animated-button" onclick="buttonClicked(37)">Button 37</button>
   <button class="button button-57" onclick="buttonClicked(38)">Button 38</button>
