@@ -163,3 +163,6 @@ courses: { compsci: {week: 1} }
         updateColor();
 </script>
 </html>
+
+<h3>So how does it work?</h3>
+<p>This is our Colors AND project which takes two colors and &'s them. Each of the two colors are created through there very own RGB values with each R, G, and B value being an 8-bit binary number. For each of these RGB values, we convert the binary number into a decimal number which is then interpreted by the code as a shade of red, green, or blue. These three shades form up each of the colors. Finally by creating another set of RGB values for the final &'ed color, with each R,G, and B value being an & of the another corresponding values, we were able to display the &'ed color</p>
