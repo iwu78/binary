@@ -1,3 +1,16 @@
+document.getElementById('imageInput').addEventListener('change', handleFileSelect);
+document.getElementById('imageInput2').addEventListener('change', handleFileSelect);
+
+function handleFileSelect(event) {
+    const input = event.target;
+    const label = document.querySelector('label[for="' + input.id + '"]'); // Get the label for the corresponding input
+
+    if (input.files.length > 0) {
+        label.textContent = input.files[0].name; // Update label text with the file name
+    } else {
+        label.textContent = 'Choose File'; // Reset label text if no file is selected
+    }
+}
 const imageInput = document.getElementById('imageInput');
 const imageInput2 = document.getElementById('imageInput2');
 const ctx = document.createElement('canvas').getContext('2d');

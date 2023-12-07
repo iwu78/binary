@@ -8,9 +8,27 @@ type: hacks
 courses: { compsci: {week: 1} }
 ---
 
-<h1><strong>Upload Images!</strong></h1>
+<head>
+<style>
+input[type="file"] {
+    display: none;
+}
+</style>
+</head>
+<h1><strong>Upload Images:</strong></h1>
+<h3>Image 1:</h3>
+<br>
+<label for="imageInput" class="button-54">
+    Choose File
+</label>
+<h3>Image 2:</h3>
+<br>
 <input type="file" id="imageInput" accept="image/*">
+<label for="imageInput2" class="button-54">
+    Choose File
+</label>
+<br><br><br><br>
 <input type="file" id="imageInput2" accept="image/*">
-<button id="andButton">Add Images</button>
+<button id="andButton" class='button-54 task-button'>ADD Images!</button>
 <canvas id="canvas"></canvas>
 <script src="../../../assets/js/add.js" type="text/javascript"></script>
