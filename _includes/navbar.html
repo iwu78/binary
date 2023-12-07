@@ -1,6 +1,9 @@
 <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
     <div class="container">
 
+        <a href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">
+            <img src="/binary/assets/images/logo.png" style="height: 50px; width: 50px; padding: 10px;">
+        </a>
         <!-- logo or branding image on left side -->
         <div class="navbar-brand">
             <a class="navbar-item"
