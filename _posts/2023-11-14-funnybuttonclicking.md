@@ -117,9 +117,9 @@ courses: { compsci: {week: 1} }
   <button class="button d-1" onclick="buttonClicked(33)">Button 33</button>
   <button class="button button-105" onclick="buttonClicked(34)">Button 34</button>
   <button class="button button-106" onclick="buttonClicked(35)">Button 35</button>
-  <button class="button button-85" onclick="buttonClicked(36)">Button 36</button>
-  <button class="button animated-button" onclick="buttonClicked(37)">Button 37</button>
-  <button class="button button-57" onclick="buttonClicked(38)">Button 38</button>
+  <button class="button btn5 btn5--stripe btn5--radius" onclick="buttonClicked(36)">Button 36</button>
+  <button class="button button-107" onclick="buttonClicked(37)">Button 37</button>
+  <button class="button btn7 red" onclick="buttonClicked(38)">Button 38</button>
   <button class="button button-85" onclick="buttonClicked(39)">Button 39</button>
   <button class="button button-92" onclick="buttonClicked(40)">Button 40</button>
 

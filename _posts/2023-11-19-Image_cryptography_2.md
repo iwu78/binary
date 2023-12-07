@@ -2,8 +2,8 @@
 toc: true
 comments: false
 layout: post
-title: Image encryption part 2
-description: Encrypt Images together
+title: Image Encryption - Cipher
+description: Image Encryptor utilizing columnar transposition.
 type: hacks
 courses: { compsci: {week: 1} }
 ---
