@@ -6,6 +6,7 @@ title: Image Steganography Decoder
 description: Reveal an image inside another!
 type: hacks
 courses: { compsci: {week: 1} }
+postimage: 'images/steg-decode.jpg'
 ---
 <head>
 <style>

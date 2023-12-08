@@ -6,6 +6,7 @@ title: Image encryption
 description: Encrypt Images together
 type: hacks
 courses: { compsci: {week: 1} }
+postimage: 'images/image-encrypt.jpg'
 ---
 
 <head>
