@@ -31,8 +31,8 @@ courses: { compsci: {week: 1} }
     animation-duration: calc(75s / var(--i));
   }
   .bubbles span:nth-child(even) {
-    background: #ff2d75;
-    box-shadow: 0 0 10px #ff2d7560, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+    background: #80ff00;
+    box-shadow: 0 0 10px #80ff0060, 0 0 50px #80ff00, 0 0 100px #80ff00;
   }
   @keyframes animate {
     0% {
