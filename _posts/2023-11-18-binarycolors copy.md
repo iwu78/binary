@@ -10,7 +10,9 @@ courses: { compsci: {week: 1} }
 <head>
 <style>
   .container1 {
-    position: relative;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -18,6 +20,7 @@ courses: { compsci: {week: 1} }
   .bubbles {
     position: relative;
     display: flex;
+    z-index: -100;
   }
   .bubbles span {
     position: relative;
