@@ -3,7 +3,7 @@ toc: true
 comments: false
 layout: post
 title: Funny Button Clicking
-description: Intermediate for the anding colors page. We just started with 48 buttons, have fun clicking them all!
+description: Intermediate for the ANDing colors page. We started with 48 buttons, have fun clicking them all!!
 type: hacks
 courses: { compsci: {week: 1} }
 ---
