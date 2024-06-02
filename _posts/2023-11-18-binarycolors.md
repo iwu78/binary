@@ -210,20 +210,20 @@ courses: { compsci: {week: 1} }
 </table>
 </body>
 <script>
-        function buttonClicked(buttonNumber) {
-          var button = document.getElementById("button" + buttonNumber);
+        function buttonClicked(buttonNumber) { // update the num#s 
+          var button = document.getElementById("button" + buttonNumber); // get the button that was clicked (numbered 1-48)
           if (button.innerHTML === "0") {
             button.innerHTML = "1";
-            var val = document.getElementById("num"+String(Math.floor((buttonNumber-1)/8)+1));
-            val.innerHTML = String(parseInt(val.innerHTML) + Math.floor(2**((((8-buttonNumber)%8)+8)%8)));
+            var val = document.getElementById("num"+String(Math.floor((buttonNumber-1)/8)+1)); // update the decimal number that the 8-bit binary is representing
+            val.innerHTML = String(parseInt(val.innerHTML) + Math.floor(2**((((8-buttonNumber)%8)+8)%8))); // worked out calculations for changing from 0 to 1 (add that power of 2)
           } else {
             button.innerHTML = "0";
             var val = document.getElementById("num"+String(Math.floor((buttonNumber-1)/8)+1));
-            val.innerHTML = String(parseInt(val.innerHTML) - Math.floor(2**((((8-buttonNumber)%8)+8)%8)));
+            val.innerHTML = String(parseInt(val.innerHTML) - Math.floor(2**((((8-buttonNumber)%8)+8)%8))); // change from 1 to 0 (subtract power of 2)
           }
-          updateColor();
+          updateColor(); // call to update box colors every time a button is clicked
         }
-        function updateColor() {
+        function updateColor() { // changing the color of the boxes by grabbing the decimal RGB num#s and updating the boxes accordingly
           var r1 = parseInt(document.getElementById("num1").innerHTML);
           var g1 = parseInt(document.getElementById("num3").innerHTML);
           var b1 = parseInt(document.getElementById("num5").innerHTML);
@@ -235,12 +235,12 @@ courses: { compsci: {week: 1} }
           var colorBox2 = document.getElementById("colorBox2");
           colorBox2.style.backgroundColor = "rgb("+r2+","+g2+","+b2+")";
           var colorBox3 = document.getElementById("colorBox3");
-          var r3 = r1 & r2;
-          var g3 = g1 & g2;
-          var b3 = b1 & b2;
-          colorBox3.style.backgroundColor = "rgb("+r3+","+g3+","+b3+")";
+          var r3 = r1 & r2; // crucial AND step for the two decimal R values
+          var g3 = g1 & g2; // same for G values
+          var b3 = b1 & b2; // for B values
+          colorBox3.style.backgroundColor = "rgb("+r3+","+g3+","+b3+")"; // lastly update the ANDed box's color
         }
-        updateColor();
+        updateColor(); // initialize box colors as black first rgb(0,0,0)
 </script>
 </html>
 
